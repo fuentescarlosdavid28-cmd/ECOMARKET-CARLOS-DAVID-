@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Misión, visión y principios de EcoMarket.">
+  <title>Nosotros | EcoMarket</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="cabecera">
+    <div class="contenedor cabecera__barra">
+      <a class="logo" href="index.html" aria-label="EcoMarket, ir al inicio">🌿 Eco<span>Market</span></a>
+
+      <!-- Menú móvil: checkbox + label (sin JavaScript) -->
+      <input type="checkbox" id="menu-check" class="menu-check" aria-label="Abrir o cerrar el menú">
+      <label for="menu-check" class="menu-boton" aria-hidden="true">☰</label>
+
+      <nav class="menu" aria-label="Navegación principal">
+        <ul class="menu__lista">
+          <li><a class="menu__enlace" href="index.html">Inicio</a></li>
+          <li><a class="menu__enlace" href="productos.html">Productos</a></li>
+          <li><a class="menu__enlace" href="nosotros.html" aria-current="page">Nosotros</a></li>
+          <li><a class="menu__enlace" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Accesos visuales: la búsqueda y el carrito no son funcionales sin JavaScript -->
+      <div class="acciones">
+        <a class="acciones__item" href="productos.html" aria-label="Buscar en el catálogo (visual)" title="Búsqueda visual">🔍</a>
+        <a class="acciones__item" href="productos.html" aria-label="Carrito (visual, sin función de compra)" title="Carrito visual">🛒</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-nosotros" aria-labelledby="t-nos">
+      <div class="contenedor">
+        <h1 id="t-nos">Pequeñas decisiones, grandes cambios</h1>
+        <p>EcoMarket es un proyecto académico que imagina una tienda donde elegir mejor sea lo más fácil: productos reutilizables, información clara y consumo responsable.</p>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="t-hist">
+      <div class="contenedor historia">
+        <img src="https://images.unsplash.com/photo-1584473457406-6240486418e9?auto=format&fit=crop&w=500&q=70" alt="Bolsas de tela reutilizables sobre una mesa" loading="lazy">
+        <div>
+          <h2 id="t-hist">Nuestra historia</h2>
+          <p>EcoMarket nace como ejercicio de desarrollo web con una pregunta sencilla: ¿cómo acercar alternativas reutilizables a quienes quieren reducir los residuos de un solo uso pero no saben por dónde empezar?</p>
+          <p>La historia es ilustrativa: la marca y sus datos son ficticios.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion seccion--beige" aria-labelledby="t-mv">
+      <div class="contenedor">
+        <h2 id="t-mv" class="visually-hidden">Misión y visión</h2>
+        <div class="dos-cols">
+          <article class="bloque bloque--mision"><h3>Misión</h3><p>Facilitar el acceso a productos reutilizables y sostenibles que ayuden a reducir el impacto ambiental de las decisiones cotidianas.</p></article>
+          <article class="bloque bloque--vision"><h3>Visión</h3><p>Convertirse en una plataforma reconocida por promover el consumo consciente y acercar alternativas sostenibles a más personas.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="t-prin">
+      <div class="contenedor">
+        <h2 id="t-prin">Nuestros principios</h2>
+        <p class="seccion__intro">Son compromisos y valores del proyecto, no certificaciones ambientales.</p>
+        <ul class="grid-principios">
+          <li class="principio"><span aria-hidden="true">🚯</span><h3>Reducción de plásticos</h3><p>Priorizar alternativas a los artículos desechables.</p></li>
+          <li class="principio"><span aria-hidden="true">♻️</span><h3>Reutilización</h3><p>Promover productos pensados para durar y reutilizarse.</p></li>
+          <li class="principio"><span aria-hidden="true">🧠</span><h3>Consumo consciente</h3><p>Ayudar a decidir con información, sin impulsos.</p></li>
+          <li class="principio"><span aria-hidden="true">🔍</span><h3>Transparencia</h3><p>Decir con claridad qué es real y qué es demostrativo.</p></li>
+          <li class="principio"><span aria-hidden="true">🤝</span><h3>Comercio responsable</h3><p>Aspirar a relaciones justas con proveedores.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="seccion seccion--beige" aria-labelledby="t-test">
+      <div class="contenedor">
+        <h2 id="t-test">Lo que dirían nuestros clientes</h2>
+        <p class="seccion__intro">Testimonios ficticios de ejemplo. Desliza horizontalmente para verlos todos.</p>
+        <ul class="testimonios" tabindex="0" aria-label="Testimonios de ejemplo">
+          <li class="testimonio"><span class="testimonio__avatar" aria-hidden="true">🧑</span><strong>Camila R. (ficticia)</strong><p class="estrellas" aria-label="5 de 5 estrellas">★★★★★</p><p>"La botella es práctica y ya no compro agua embotellada."</p></li>
+          <li class="testimonio"><span class="testimonio__avatar" aria-hidden="true">👩</span><strong>Andrés P. (ficticio)</strong><p class="estrellas" aria-label="4 de 5 estrellas">★★★★☆</p><p>"Las bolsas de tela resisten el mercado de toda la semana."</p></li>
+          <li class="testimonio"><span class="testimonio__avatar" aria-hidden="true">🧔</span><strong>Laura M. (ficticia)</strong><p class="estrellas" aria-label="5 de 5 estrellas">★★★★★</p><p>"El jabón y el cepillo de bambú me cambiaron la rutina."</p></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="pie">
+    <div class="contenedor pie__grid">
+      <section aria-labelledby="pie-contacto">
+        <h2 id="pie-contacto">🌿 EcoMarket</h2>
+        <p>hola@ecomarket-ejemplo.com<br>Tel. demostrativo: +57 300 000 0000<br>Proyecto académico, datos ficticios.</p>
+      </section>
+      <nav aria-labelledby="pie-enlaces">
+        <h2 id="pie-enlaces">Páginas</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <section aria-labelledby="pie-legal">
+        <h2 id="pie-legal">Legal (visual)</h2>
+        <ul>
+          <li><a href="contacto.html">Términos y condiciones</a></li>
+          <li><a href="contacto.html">Política de privacidad</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="pie-redes">
+        <h2 id="pie-redes">Redes (ejemplo)</h2>
+        <ul>
+          <li><a href="contacto.html">Instagram</a></li>
+          <li><a href="contacto.html">Facebook</a></li>
+          <li><a href="contacto.html">YouTube</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="contenedor pie__legal">
+      <small>© 2026 EcoMarket. Proyecto académico de desarrollo web. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+</body>
+</html>

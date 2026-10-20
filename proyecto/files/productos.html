@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Catálogo demostrativo de 20 productos ecológicos.">
+  <title>Productos | EcoMarket</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="cabecera">
+    <div class="contenedor cabecera__barra">
+      <a class="logo" href="index.html" aria-label="EcoMarket, ir al inicio">🌿 Eco<span>Market</span></a>
+
+      <!-- Menú móvil: checkbox + label (sin JavaScript) -->
+      <input type="checkbox" id="menu-check" class="menu-check" aria-label="Abrir o cerrar el menú">
+      <label for="menu-check" class="menu-boton" aria-hidden="true">☰</label>
+
+      <nav class="menu" aria-label="Navegación principal">
+        <ul class="menu__lista">
+          <li><a class="menu__enlace" href="index.html">Inicio</a></li>
+          <li><a class="menu__enlace" href="productos.html" aria-current="page">Productos</a></li>
+          <li><a class="menu__enlace" href="nosotros.html">Nosotros</a></li>
+          <li><a class="menu__enlace" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Accesos visuales: la búsqueda y el carrito no son funcionales sin JavaScript -->
+      <div class="acciones">
+        <a class="acciones__item" href="productos.html" aria-label="Buscar en el catálogo (visual)" title="Búsqueda visual">🔍</a>
+        <a class="acciones__item" href="productos.html" aria-label="Carrito (visual, sin función de compra)" title="Carrito visual">🛒</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="pagina-cabecera" aria-labelledby="t-cat">
+      <div class="contenedor">
+        <h1 id="t-cat">Nuestros productos</h1>
+        <p>Veinte artículos de ejemplo para reducir residuos en casa, en la calle y en tu rutina. Los precios son demostrativos.</p>
+        <div class="buscador" role="search">
+          <label class="visually-hidden" for="buscar">Buscar productos</label>
+          <input type="search" id="buscar" placeholder="Buscar productos (visual)">
+          <button class="btn" type="button">Buscar</button>
+        </div>
+        <ul class="chips" aria-label="Filtros rápidos (visuales)">
+          <li class="chip">Hogar</li><li class="chip">Moda</li><li class="chip">Cuidado personal</li><li class="chip">Alimentos</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="contenedor seccion">
+      <p class="aviso"><strong>Limitación:</strong> sin JavaScript, la búsqueda y los filtros no modifican el catálogo y el botón de favoritos (♥) solo cambia de color mientras la página está abierta. Los botones "Comprar" te llevan a contacto porque no existe carrito real.</p>
+      <div class="catalogo">
+        <aside class="filtros" aria-label="Filtros (visuales)">
+          <fieldset><legend>Categorías</legend>
+            <label><input type="checkbox"> Hogar</label><label><input type="checkbox"> Moda</label>
+            <label><input type="checkbox"> Cuidado personal</label><label><input type="checkbox"> Alimentos</label>
+          </fieldset>
+          <fieldset><legend>Rango de precios</legend>
+            <label class="visually-hidden" for="rango">Precio máximo</label>
+            <input type="range" id="rango" min="5000" max="80000" step="5000" value="80000">
+            <p class="ayuda">$ 5.000 a $ 80.000 COP</p>
+          </fieldset>
+          <fieldset><legend>Disponibilidad</legend>
+            <label><input type="radio" name="disp" checked> Todos</label>
+            <label><input type="radio" name="disp"> Disponibles</label>
+            <label><input type="radio" name="disp"> Agotados</label>
+          </fieldset>
+        </aside>
+        <section aria-label="Listado de productos">
+          <div class="grid-catalogo">
+          <article class="tarjeta producto">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=500&q=70" alt="Botella de acero inoxidable" loading="lazy">
+              <span class="etiqueta">Disponible</span><span class="etiqueta etiqueta--dest">Destacado</span>
+              <input type="checkbox" id="fav1" class="fav-check">
+              <label for="fav1" class="fav" aria-label="Marcar Botella de acero como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Hogar</p>
+              <h3>Botella de acero</h3>
+              <p class="tarjeta__texto">Botella reutilizable de 750 ml.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 59.900 COP</span><a class="btn btn--borde" href="contacto.html">Comprar</a></div>
+            </div>
+          </article>
+          <article class="tarjeta producto">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1584473457406-6240486418e9?auto=format&fit=crop&w=500&q=70" alt="Bolsa de tela de algodón" loading="lazy">
+              <span class="etiqueta">Disponible</span><span class="etiqueta etiqueta--nuevo">Nuevo</span>
+              <input type="checkbox" id="fav2" class="fav-check">
+              <label for="fav2" class="fav" aria-label="Marcar Bolsa de algodón como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Moda</p>
+              <h3>Bolsa de algodón</h3>
+              <p class="tarjeta__texto">Bolsa lavable para el mercado.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 18.500 COP</span><a class="btn btn--borde" href="contacto.html">Comprar</a></div>
+            </div>
+          </article>
+          <article class="tarjeta producto">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=500&q=70" alt="Cepillos de dientes de bambú" loading="lazy">
+              <span class="etiqueta">Disponible</span>
+              <input type="checkbox" id="fav3" class="fav-check">
+              <label for="fav3" class="fav" aria-label="Marcar Cepillo de bambú como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Cuidado personal</p>
+              <h3>Cepillo de bambú</h3>
+              <p class="tarjeta__texto">Mango de bambú, cerdas suaves.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 9.900 COP</span><a class="btn btn--borde" href="contacto.html">Comprar</a></div>
+            </div>
+          </article>
+          <article class="tarjeta producto">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1600857062241-98e5dba7f214?auto=format&fit=crop&w=500&q=70" alt="Jabones naturales" loading="lazy">
+              <span class="etiqueta">Disponible</span>
+              <input type="checkbox" id="fav4" class="fav-check">
+              <label for="fav4" class="fav" aria-label="Marcar Jabón natural como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Cuidado personal</p>
+              <h3>Jabón natural</h3>
+              <p class="tarjeta__texto">Barra artesanal sin empaque.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 12.000 COP</span><a class="btn btn--borde" href="contacto.html">Comprar</a></div>
+            </div>
+          </article>
+          <article class="tarjeta producto">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1610701596061-2ecf227e85b2?auto=format&fit=crop&w=500&q=70" alt="Recipientes de vidrio con tapa" loading="lazy">
+              <span class="etiqueta">Disponible</span>
+              <input type="checkbox" id="fav5" class="fav-check">
+              <label for="fav5" class="fav" aria-label="Marcar Set de recipientes como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Hogar</p>
+              <h3>Set de recipientes</h3>
+              <p class="tarjeta__texto">Tres recipientes de vidrio con tapa.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 74.900 COP</span><a class="btn btn--borde" href="contacto.html">Comprar</a></div>
+            </div>
+          </article>
+          <article class="tarjeta producto producto--agotado">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=500&q=70" alt="Termo reutilizable" loading="lazy">
+              <span class="etiqueta etiqueta--agot">Agotado</span>
+              <input type="checkbox" id="fav6" class="fav-check">
+              <label for="fav6" class="fav" aria-label="Marcar Termo reutilizable como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Hogar</p>
+              <h3>Termo reutilizable</h3>
+              <p class="tarjeta__texto">Mantiene la temperatura por horas.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 69.900 COP</span><a class="btn btn--borde" href="contacto.html">Avisarme</a></div>
+            </div>
+          </article>
+          <article class="tarjeta producto">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=500&q=70" alt="Botella y pajillas reutilizables" loading="lazy">
+              <span class="etiqueta">Disponible</span>
+              <input type="checkbox" id="fav7" class="fav-check">
+              <label for="fav7" class="fav" aria-label="Marcar Pajillas de acero como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Hogar</p>
+              <h3>Pajillas de acero</h3>
+              <p class="tarjeta__texto">Set de 4 con cepillo limpiador.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 14.900 COP</span><a class="btn btn--borde" href="contacto.html">Comprar</a></div>
+            </div>
+          </article>
+          <article class="tarjeta producto">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1610701596061-2ecf227e85b2?auto=format&fit=crop&w=500&q=70" alt="Recipientes para guardar alimentos" loading="lazy">
+              <span class="etiqueta">Disponible</span><span class="etiqueta etiqueta--nuevo">Nuevo</span>
+              <input type="checkbox" id="fav8" class="fav-check">
+              <label for="fav8" class="fav" aria-label="Marcar Envoltorios de cera como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Hogar</p>
+              <h3>Envoltorios de cera</h3>
+              <p class="tarjeta__texto">Alternativa al papel film.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 28.000 COP</span><a class="btn btn--borde" href="contacto.html">Comprar</a></div>
+            </div>
+          </article>
+          <article class="tarjeta producto">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1600857062241-98e5dba7f214?auto=format&fit=crop&w=500&q=70" alt="Esponja natural y jabón" loading="lazy">
+              <span class="etiqueta">Disponible</span>
+              <input type="checkbox" id="fav9" class="fav-check">
+              <label for="fav9" class="fav" aria-label="Marcar Esponja vegetal como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Hogar</p>
+              <h3>Esponja vegetal</h3>
+              <p class="tarjeta__texto">Esponja de luffa para lavar platos.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 7.500 COP</span><a class="btn btn--borde" href="contacto.html">Comprar</a></div>
+            </div>
+          </article>
+          <article class="tarjeta producto">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1600857062241-98e5dba7f214?auto=format&fit=crop&w=500&q=70" alt="Barras de jabón y champú" loading="lazy">
+              <span class="etiqueta">Disponible</span><span class="etiqueta etiqueta--dest">Destacado</span>
+              <input type="checkbox" id="fav10" class="fav-check">
+              <label for="fav10" class="fav" aria-label="Marcar Champú sólido como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Cuidado personal</p>
+              <h3>Champú sólido</h3>
+              <p class="tarjeta__texto">Barra sin envase plástico.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 24.900 COP</span><a class="btn btn--borde" href="contacto.html">Comprar</a></div>
+            </div>
+          </article>
+          <article class="tarjeta producto producto--agotado">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1600857062241-98e5dba7f214?auto=format&fit=crop&w=500&q=70" alt="Productos de cuidado personal" loading="lazy">
+              <span class="etiqueta etiqueta--agot">Agotado</span>
+              <input type="checkbox" id="fav11" class="fav-check">
+              <label for="fav11" class="fav" aria-label="Marcar Desodorante en crema como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Cuidado personal</p>
+              <h3>Desodorante en crema</h3>
+              <p class="tarjeta__texto">Fórmula natural en frasco de vidrio.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 21.000 COP</span><a class="btn btn--borde" href="contacto.html">Avisarme</a></div>
+            </div>
+          </article>
+          <article class="tarjeta producto">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=500&q=70" alt="Accesorios de bambú" loading="lazy">
+              <span class="etiqueta">Disponible</span>
+              <input type="checkbox" id="fav12" class="fav-check">
+              <label for="fav12" class="fav" aria-label="Marcar Peine de bambú como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Cuidado personal</p>
+              <h3>Peine de bambú</h3>
+              <p class="tarjeta__texto">Peine ligero y duradero.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 11.500 COP</span><a class="btn btn--borde" href="contacto.html">Comprar</a></div>
+            </div>
+          </article>
+          <article class="tarjeta producto">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1584473457406-6240486418e9?auto=format&fit=crop&w=500&q=70" alt="Bolsa de lona" loading="lazy">
+              <span class="etiqueta">Disponible</span>
+              <input type="checkbox" id="fav13" class="fav-check">
+              <label for="fav13" class="fav" aria-label="Marcar Tote de lona como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Moda</p>
+              <h3>Tote de lona</h3>
+              <p class="tarjeta__texto">Lona reciclada, asas reforzadas.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 32.000 COP</span><a class="btn btn--borde" href="contacto.html">Comprar</a></div>
+            </div>
+          </article>
+          <article class="tarjeta producto">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1584473457406-6240486418e9?auto=format&fit=crop&w=500&q=70" alt="Accesorio de tela" loading="lazy">
+              <span class="etiqueta">Disponible</span><span class="etiqueta etiqueta--nuevo">Nuevo</span>
+              <input type="checkbox" id="fav14" class="fav-check">
+              <label for="fav14" class="fav" aria-label="Marcar Gorra de algodón como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Moda</p>
+              <h3>Gorra de algodón</h3>
+              <p class="tarjeta__texto">Algodón orgánico, talla ajustable.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 39.900 COP</span><a class="btn btn--borde" href="contacto.html">Comprar</a></div>
+            </div>
+          </article>
+          <article class="tarjeta producto">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1584473457406-6240486418e9?auto=format&fit=crop&w=500&q=70" alt="Bolsas reutilizables" loading="lazy">
+              <span class="etiqueta">Disponible</span>
+              <input type="checkbox" id="fav15" class="fav-check">
+              <label for="fav15" class="fav" aria-label="Marcar Bolsas de malla como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Moda</p>
+              <h3>Bolsas de malla</h3>
+              <p class="tarjeta__texto">Set de 3 para frutas y verduras.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 16.000 COP</span><a class="btn btn--borde" href="contacto.html">Comprar</a></div>
+            </div>
+          </article>
+          <article class="tarjeta producto">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1610701596061-2ecf227e85b2?auto=format&fit=crop&w=500&q=70" alt="Frasco de vidrio con alimento" loading="lazy">
+              <span class="etiqueta">Disponible</span>
+              <input type="checkbox" id="fav16" class="fav-check">
+              <label for="fav16" class="fav" aria-label="Marcar Miel artesanal como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Alimentos</p>
+              <h3>Miel artesanal</h3>
+              <p class="tarjeta__texto">Frasco de vidrio de 500 g.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 26.000 COP</span><a class="btn btn--borde" href="contacto.html">Comprar</a></div>
+            </div>
+          </article>
+          <article class="tarjeta producto">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1610701596061-2ecf227e85b2?auto=format&fit=crop&w=500&q=70" alt="Recipiente con granola" loading="lazy">
+              <span class="etiqueta">Disponible</span>
+              <input type="checkbox" id="fav17" class="fav-check">
+              <label for="fav17" class="fav" aria-label="Marcar Granola a granel como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Alimentos</p>
+              <h3>Granola a granel</h3>
+              <p class="tarjeta__texto">Avena, frutos secos y semillas.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 18.900 COP</span><a class="btn btn--borde" href="contacto.html">Comprar</a></div>
+            </div>
+          </article>
+          <article class="tarjeta producto producto--agotado">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=500&q=70" alt="Café y termo" loading="lazy">
+              <span class="etiqueta etiqueta--agot">Agotado</span>
+              <input type="checkbox" id="fav18" class="fav-check">
+              <label for="fav18" class="fav" aria-label="Marcar Café orgánico como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Alimentos</p>
+              <h3>Café orgánico</h3>
+              <p class="tarjeta__texto">Molido, 250 g.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 29.900 COP</span><a class="btn btn--borde" href="contacto.html">Avisarme</a></div>
+            </div>
+          </article>
+          <article class="tarjeta producto">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=500&q=70" alt="Té en taza" loading="lazy">
+              <span class="etiqueta">Disponible</span>
+              <input type="checkbox" id="fav19" class="fav-check">
+              <label for="fav19" class="fav" aria-label="Marcar Té de hierbas como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Alimentos</p>
+              <h3>Té de hierbas</h3>
+              <p class="tarjeta__texto">Mezcla de hierbas, 20 sobres.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 15.500 COP</span><a class="btn btn--borde" href="contacto.html">Comprar</a></div>
+            </div>
+          </article>
+          <article class="tarjeta producto">
+            <div class="producto__media">
+              <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1610701596061-2ecf227e85b2?auto=format&fit=crop&w=500&q=70" alt="Alimentos en recipiente" loading="lazy">
+              <span class="etiqueta">Disponible</span>
+              <input type="checkbox" id="fav20" class="fav-check">
+              <label for="fav20" class="fav" aria-label="Marcar Panela orgánica como favorito (visual)">♥</label>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="producto__cat">Alimentos</p>
+              <h3>Panela orgánica</h3>
+              <p class="tarjeta__texto">Bloque de 500 g.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 8.900 COP</span><a class="btn btn--borde" href="contacto.html">Comprar</a></div>
+            </div>
+          </article>
+          </div>
+          <nav aria-label="Paginación (visual)">
+            <ul class="paginacion">
+              <li><span>Anterior</span></li><li><span class="activa" aria-current="page">1</span></li>
+              <li><span>2</span></li><li><span>3</span></li><li><span>Siguiente</span></li>
+            </ul>
+            <p class="ayuda">Paginación decorativa: los 20 productos ya aparecen en esta página.</p>
+          </nav>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="pie">
+    <div class="contenedor pie__grid">
+      <section aria-labelledby="pie-contacto">
+        <h2 id="pie-contacto">🌿 EcoMarket</h2>
+        <p>hola@ecomarket-ejemplo.com<br>Tel. demostrativo: +57 300 000 0000<br>Proyecto académico, datos ficticios.</p>
+      </section>
+      <nav aria-labelledby="pie-enlaces">
+        <h2 id="pie-enlaces">Páginas</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <section aria-labelledby="pie-legal">
+        <h2 id="pie-legal">Legal (visual)</h2>
+        <ul>
+          <li><a href="contacto.html">Términos y condiciones</a></li>
+          <li><a href="contacto.html">Política de privacidad</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="pie-redes">
+        <h2 id="pie-redes">Redes (ejemplo)</h2>
+        <ul>
+          <li><a href="contacto.html">Instagram</a></li>
+          <li><a href="contacto.html">Facebook</a></li>
+          <li><a href="contacto.html">YouTube</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="contenedor pie__legal">
+      <small>© 2026 EcoMarket. Proyecto académico de desarrollo web. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+</body>
+</html>

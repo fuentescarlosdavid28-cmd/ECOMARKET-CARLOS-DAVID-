@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EcoMarket: tienda en línea de productos ecológicos, reutilizables y sostenibles. Proyecto académico con datos demostrativos.">
+  <title>EcoMarket | Compra responsable, vive sostenible</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="cabecera">
+    <div class="contenedor cabecera__barra">
+      <a class="logo" href="index.html" aria-label="EcoMarket, ir al inicio">🌿 Eco<span>Market</span></a>
+
+      <!-- Menú móvil: checkbox + label (sin JavaScript) -->
+      <input type="checkbox" id="menu-check" class="menu-check" aria-label="Abrir o cerrar el menú">
+      <label for="menu-check" class="menu-boton" aria-hidden="true">☰</label>
+
+      <nav class="menu" aria-label="Navegación principal">
+        <ul class="menu__lista">
+          <li><a class="menu__enlace" href="index.html" aria-current="page">Inicio</a></li>
+          <li><a class="menu__enlace" href="productos.html">Productos</a></li>
+          <li><a class="menu__enlace" href="nosotros.html">Nosotros</a></li>
+          <li><a class="menu__enlace" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Accesos visuales: la búsqueda y el carrito no son funcionales sin JavaScript -->
+      <div class="acciones">
+        <a class="acciones__item" href="productos.html" aria-label="Buscar en el catálogo (visual)" title="Búsqueda visual">🔍</a>
+        <a class="acciones__item" href="productos.html" aria-label="Carrito (visual, sin función de compra)" title="Carrito visual">🛒</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="titulo-hero">
+      <div class="contenedor">
+        <div class="hero__contenido">
+          <h1 id="titulo-hero">Compra responsable, vive sostenible</h1>
+          <p class="hero__subtitulo">EcoMarket reúne productos reutilizables y de materiales naturales para que reducir residuos sea parte fácil de tu día a día.</p>
+          <a class="btn btn--claro" href="productos.html">Explorar productos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS DESTACADOS -->
+    <section class="seccion" aria-labelledby="titulo-destacados">
+      <div class="contenedor">
+        <h2 id="titulo-destacados">Productos destacados</h2>
+        <p class="seccion__intro">Una muestra de nuestro catálogo. Los precios son demostrativos.</p>
+
+        <div class="grid-productos">
+          <article class="tarjeta">
+            <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=600&q=70" alt="Botella de acero inoxidable reutilizable" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h3>Botella de acero</h3>
+              <p class="tarjeta__texto">Mantiene tus bebidas frías o calientes y reemplaza botellas desechables.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 59.900 COP</span><a class="btn btn--borde" href="productos.html">Ver más</a></div>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1584473457406-6240486418e9?auto=format&fit=crop&w=600&q=70" alt="Bolsa de tela reutilizable de algodón" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h3>Bolsa de algodón</h3>
+              <p class="tarjeta__texto">Resistente y lavable, ideal para el mercado y las compras diarias.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 18.500 COP</span><a class="btn btn--borde" href="productos.html">Ver más</a></div>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=600&q=70" alt="Cepillos de dientes de bambú" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h3>Cepillo de bambú</h3>
+              <p class="tarjeta__texto">Mango de bambú como alternativa al plástico en tu rutina de higiene.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 9.900 COP</span><a class="btn btn--borde" href="productos.html">Ver más</a></div>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1600857062241-98e5dba7f214?auto=format&fit=crop&w=600&q=70" alt="Jabones naturales artesanales" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h3>Jabón natural</h3>
+              <p class="tarjeta__texto">Barra de jabón artesanal, sin empaque plástico.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 12.000 COP</span><a class="btn btn--borde" href="productos.html">Ver más</a></div>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1610701596061-2ecf227e85b2?auto=format&fit=crop&w=600&q=70" alt="Recipientes de vidrio reutilizables para alimentos" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h3>Set de recipientes</h3>
+              <p class="tarjeta__texto">Recipientes de vidrio con tapa para guardar y llevar alimentos.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 74.900 COP</span><a class="btn btn--borde" href="productos.html">Ver más</a></div>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <img class="tarjeta__imagen" src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=600&q=70" alt="Termo reutilizable sobre una mesa de madera" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h3>Termo reutilizable</h3>
+              <p class="tarjeta__texto">Perfecto para llevar tu café o té sin vasos desechables.</p>
+              <div class="tarjeta__pie"><span class="precio">$ 69.900 COP</span><a class="btn btn--borde" href="productos.html">Ver más</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="seccion seccion--beige" aria-labelledby="titulo-beneficios">
+      <div class="contenedor">
+        <h2 id="titulo-beneficios">¿Por qué comprar en EcoMarket?</h2>
+        <ul class="grid-beneficios">
+          <li class="beneficio"><span class="beneficio__icono" aria-hidden="true">♻️</span><h3>Materiales reutilizables</h3><p>Productos pensados para usarse muchas veces.</p></li>
+          <li class="beneficio"><span class="beneficio__icono" aria-hidden="true">🚯</span><h3>Menos plástico</h3><p>Alternativas a los artículos de un solo uso.</p></li>
+          <li class="beneficio"><span class="beneficio__icono" aria-hidden="true">🧠</span><h3>Consumo consciente</h3><p>Información clara para elegir con criterio.</p></li>
+          <li class="beneficio"><span class="beneficio__icono" aria-hidden="true">🌱</span><h3>Selección responsable</h3><p>Priorizamos materiales naturales y duraderos.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- LLAMADO A LA ACCIÓN -->
+    <section class="seccion cta" aria-labelledby="titulo-cta">
+      <div class="contenedor">
+        <h2 id="titulo-cta">Descubre el catálogo completo</h2>
+        <p>Veinte productos de ejemplo para el hogar, la moda, el cuidado personal y la alimentación.</p>
+        <a class="btn btn--claro" href="productos.html">Ver todos los productos</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="pie">
+    <div class="contenedor pie__grid">
+      <section aria-labelledby="pie-contacto">
+        <h2 id="pie-contacto">🌿 EcoMarket</h2>
+        <p>hola@ecomarket-ejemplo.com<br>Tel. demostrativo: +57 300 000 0000<br>Proyecto académico, datos ficticios.</p>
+      </section>
+      <nav aria-labelledby="pie-enlaces">
+        <h2 id="pie-enlaces">Páginas</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <section aria-labelledby="pie-legal">
+        <h2 id="pie-legal">Legal (visual)</h2>
+        <ul>
+          <li><a href="contacto.html">Términos y condiciones</a></li>
+          <li><a href="contacto.html">Política de privacidad</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="pie-redes">
+        <h2 id="pie-redes">Redes (ejemplo)</h2>
+        <ul>
+          <li><a href="contacto.html">Instagram</a></li>
+          <li><a href="contacto.html">Facebook</a></li>
+          <li><a href="contacto.html">YouTube</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="contenedor pie__legal">
+      <small>© 2026 EcoMarket. Proyecto académico de desarrollo web. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+</body>
+</html>
