@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Formulario de contacto demostrativo de EcoMarket.">
   <title>Contacto | EcoMarket</title>
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
 </head>
 <body>
 
   <!-- ENCABEZADO -->
   <header class="cabecera">
     <div class="contenedor cabecera__barra">
-      <a class="logo" href="index.html" aria-label="EcoMarket, ir al inicio">🌿 Eco<span>Market</span></a>
+      <a class="logo" href="../index.html" aria-label="EcoMarket, ir al inicio"><img src="../img/icons/leaf.svg" alt=""> Eco<span>Market</span></a>
 
       <!-- Menú móvil: checkbox + label (sin JavaScript) -->
       <input type="checkbox" id="menu-check" class="menu-check" aria-label="Abrir o cerrar el menú">
@@ -20,9 +23,9 @@
 
       <nav class="menu" aria-label="Navegación principal">
         <ul class="menu__lista">
-          <li><a class="menu__enlace" href="index.html">Inicio</a></li>
+          <li><a class="menu__enlace" href="../index.html">Inicio</a></li>
           <li><a class="menu__enlace" href="productos.html">Productos</a></li>
-          <li><a class="menu__enlace" href="nosotros.html">Nosotros</a></li>
+          <li><a class="menu__enlace" href="sobre-nosotros.html">Nosotros</a></li>
           <li><a class="menu__enlace" href="contacto.html" aria-current="page">Contacto</a></li>
         </ul>
       </nav>
@@ -46,13 +49,18 @@
         <ul class="info-lista">
           <li>📧 hola@ecomarket-ejemplo.com</li>
           <li>📞 +57 300 000 0000 (número demostrativo)</li>
-          <li>🕘 Lunes a viernes, 8:00 a 17:00 (horario de ejemplo)</li>
-          <li>📍 Ubicación ilustrativa, no es una dirección real</li>
+          <li>🕗 Lunes a viernes, 8:00 a 17:00 (horario de ejemplo)</li>
+          <li>📍 ECOMARKET Bucaramanga, Santander</li>
         </ul>
-        <div class="mapa" role="img" aria-label="Mapa decorativo con una ubicación ilustrativa de EcoMarket">
-          <span class="mapa__pin" aria-hidden="true">📍</span>
-          <span class="mapa__texto">Mapa decorativo hecho con CSS</span>
-        </div>
+        <iframe
+          class="mapa"
+          src="https://maps.google.com/maps?q=7.0854738%2C-73.1422914&amp;z=17&amp;output=embed"
+          title="Mapa de Google con la ubicación de ECOMARKET en Bucaramanga"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=ECOMARKET%2C+Bucaramanga%2C+Santander%2C+Colombia" target="_blank" rel="noopener noreferrer">Abrir en Google Maps</a>.</p>
         <h2>Redes sociales (enlaces de ejemplo)</h2>
         <ul class="redes">
           <li><a href="https://example.com" aria-label="Instagram (enlace de ejemplo)">IG</a></li>
@@ -63,21 +71,21 @@
 
       <section aria-labelledby="t-form">
         <h2 id="t-form">Envíanos un mensaje</h2>
-        <p class="aviso">El navegador valida los campos obligatorios y el formato del correo. El envío real a un correo necesita un servicio externo o un servidor, por eso este formulario no envía nada.</p>
-        <form class="formulario" action="contacto.html" method="get">
+        <p class="aviso">El navegador valida los campos obligatorios y el formato del correo. Esta demostración no transmite ni guarda los datos; el envío real requiere un servidor o un servicio externo.</p>
+        <form class="formulario" action="#t-form" method="get">
           <div class="campo"><label for="nombre">Nombre completo</label>
-            <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Ej.: Ana Gómez" autocomplete="name">
+            <input type="text" id="nombre" required minlength="3" placeholder="Ej.: Ana Gómez" autocomplete="name">
             <p class="ayuda">Mínimo 3 caracteres.</p></div>
           <div class="campo"><label for="correo">Correo electrónico</label>
-            <input type="email" id="correo" name="correo" required placeholder="nombre@correo.com" autocomplete="email">
+            <input type="email" id="correo" required placeholder="nombre@correo.com" autocomplete="email">
             <p class="ayuda">Debe incluir @ y un dominio.</p></div>
           <div class="campo"><label for="asunto">Asunto</label>
-            <input type="text" id="asunto" name="asunto" required placeholder="¿Sobre qué quieres hablar?">
+            <input type="text" id="asunto" required placeholder="¿Sobre qué quieres hablar?">
             <p class="ayuda">Campo obligatorio.</p></div>
           <div class="campo"><label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" required minlength="10" placeholder="Escribe tu mensaje"></textarea>
+            <textarea id="mensaje" required minlength="10" placeholder="Escribe tu mensaje"></textarea>
             <p class="ayuda">Mínimo 10 caracteres.</p></div>
-          <button class="btn" type="submit">Enviar mensaje</button>
+          <button class="btn" type="submit">Validar formulario</button>
         </form>
       </section>
     </div>
@@ -93,9 +101,9 @@
       <nav aria-labelledby="pie-enlaces">
         <h2 id="pie-enlaces">Páginas</h2>
         <ul>
-          <li><a href="index.html">Inicio</a></li>
+          <li><a href="../index.html">Inicio</a></li>
           <li><a href="productos.html">Productos</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="sobre-nosotros.html">Nosotros</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>

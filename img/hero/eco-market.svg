@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Paisaje natural para EcoMarket</title>
+  <desc id="desc">Colinas verdes, sol cálido y hojas en un paisaje sostenible.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1">
+      <stop stop-color="#b9d9b0"/>
+      <stop offset="1" stop-color="#f5f5dc"/>
+    </linearGradient>
+    <linearGradient id="hill" x2="0" y2="1">
+      <stop stop-color="#57996a"/>
+      <stop offset="1" stop-color="#14452f"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#sky)" d="M0 0h1600v900H0z"/>
+  <circle cx="1240" cy="220" r="105" fill="#f4ca76"/>
+  <path fill="#8ebd87" d="M0 545 240 370l220 160 245-275 285 270 230-175 380 225v325H0z"/>
+  <path fill="url(#hill)" d="m0 655 245-130 230 112 265-173 280 190 245-116 335 152v210H0z"/>
+  <path fill="#255c3e" d="M0 760c220-84 394-54 598 20 204 74 394 66 582-14s300-83 420-39v173H0z"/>
+  <g fill="#dcebd3" opacity=".9">
+    <path d="M1280 602c38-92 105-119 174-117-24 73-78 117-174 117Zm-14 4c-25-82-3-144 48-187 23 69 10 128-48 187Z"/>
+    <path d="M300 685c38-92 105-119 174-117-24 73-78 117-174 117Zm-14 4c-25-82-3-144 48-187 23 69 10 128-48 187Z"/>
+  </g>
+</svg>

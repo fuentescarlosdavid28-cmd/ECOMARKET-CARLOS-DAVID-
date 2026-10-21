@@ -1,0 +1,144 @@
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--blanco);
+  border-bottom: 1px solid var(--gris-borde);
+}
+.cabecera__barra {
+  display: flex;
+  min-height: 64px;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--esp-2);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--verde-profundo);
+  font-family: var(--fuente-titulo);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.logo span { color: var(--verde-oscuro); }
+.logo img { width: 1.5rem; }
+.menu-check { position: absolute; opacity: 0; pointer-events: none; }
+.menu-boton {
+  order: 3;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radio);
+  cursor: pointer;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+.menu-check:focus-visible + .menu-boton { outline: 3px solid var(--verde-profundo); outline-offset: 3px; }
+.menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  display: none;
+  padding: var(--esp-2);
+  border-bottom: 1px solid var(--gris-borde);
+  background: var(--blanco);
+}
+.menu-check:checked ~ .menu { display: block; }
+.menu__lista {
+  display: grid;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu__enlace {
+  display: block;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radio);
+  color: var(--verde-profundo);
+  font-weight: 600;
+  text-decoration: none;
+}
+.menu__enlace:hover, .menu__enlace[aria-current="page"] { background: var(--beige); }
+.acciones { display: flex; gap: 0.5rem; margin-left: auto; }
+.acciones__item {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--beige);
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+.hero {
+  display: grid;
+  min-height: 70vh;
+  align-items: center;
+  color: var(--blanco);
+  background: linear-gradient(90deg, rgba(10, 40, 26, 0.82), rgba(10, 40, 26, 0.35)), url("../img/hero/eco-market.svg") center / cover;
+}
+.hero__contenido { max-width: 640px; padding-block: var(--esp-5); }
+.hero__subtitulo { margin-bottom: var(--esp-3); font-size: 1.1rem; }
+.grid-productos, .grid-beneficios, .grid-principios {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--esp-3);
+}
+.grid-beneficios, .grid-principios { margin: 0; padding: 0; list-style: none; }
+.pie { padding-top: var(--esp-4); background: var(--verde-profundo); color: var(--beige); }
+.pie a { color: var(--beige); text-decoration: none; }
+.pie ul { display: grid; gap: 0.4rem; margin: 0; padding: 0; list-style: none; }
+.pie__grid { display: grid; grid-template-columns: 1fr; gap: var(--esp-3); }
+.pie h2 { color: var(--blanco); font-size: 1.1rem; }
+.pie__legal {
+  margin-top: var(--esp-4);
+  padding-block: var(--esp-2);
+  border-top: 1px solid rgba(245, 245, 220, 0.25);
+  font-size: 0.9rem;
+}
+.pagina-cabecera { padding-block: var(--esp-4); background: var(--beige); }
+.pagina-cabecera p { max-width: 60ch; color: var(--gris); }
+.buscador { display: flex; max-width: 520px; gap: var(--esp-1); margin-top: var(--esp-2); }
+.buscador input { flex: 1; min-width: 0; }
+.chips { display: flex; flex-wrap: wrap; gap: var(--esp-1); margin-top: var(--esp-2); padding: 0; list-style: none; }
+.catalogo { display: grid; grid-template-columns: 1fr; align-items: start; gap: var(--esp-3); }
+.grid-catalogo { display: grid; grid-template-columns: 1fr; gap: var(--esp-3); }
+.hero-nosotros { padding-block: var(--esp-5); background: var(--verde-profundo); color: var(--blanco); text-align: center; }
+.hero-nosotros p { max-width: 60ch; margin-inline: auto; }
+.historia { display: flex; flex-direction: column; align-items: center; gap: var(--esp-3); }
+.historia > * { flex: 1; }
+.historia img { width: 100%; border-radius: var(--radio); }
+.dos-cols { display: grid; grid-template-columns: 1fr; gap: var(--esp-3); }
+.testimonios { display: flex; gap: var(--esp-2); overflow-x: auto; padding: 0 0 var(--esp-2); scroll-snap-type: x mandatory; list-style: none; }
+.testimonio { flex: 0 0 min(85%, 340px); scroll-snap-align: start; }
+.contacto-grid { display: grid; grid-template-columns: 1fr; gap: var(--esp-4); }
+.info-lista { display: grid; gap: var(--esp-1); margin: 0 0 var(--esp-3); padding: 0; list-style: none; }
+.redes { display: flex; gap: var(--esp-2); margin: var(--esp-2) 0 0; padding: 0; list-style: none; }
+.mapa { display: block; width: 100%; height: 280px; border: 0; border-radius: var(--radio); }
+
+@media (min-width: 600px) {
+  .grid-productos, .grid-beneficios, .dos-cols, .grid-principios { grid-template-columns: repeat(2, 1fr); }
+  .pie__grid { grid-template-columns: repeat(2, 1fr); }
+  .grid-catalogo { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 900px) {
+  .menu-check { display: none; }
+  .menu-boton { display: none; }
+  .menu { position: static; display: block; margin-left: auto; padding: 0; border: 0; }
+  .menu__lista { display: flex; gap: 0.25rem; }
+  .acciones { margin-left: var(--esp-2); }
+  .grid-productos { grid-template-columns: repeat(3, 1fr); }
+  .grid-beneficios { grid-template-columns: repeat(4, 1fr); }
+  .pie__grid { grid-template-columns: 2fr 1fr 1fr 1fr; }
+  .catalogo { grid-template-columns: 260px 1fr; }
+  .filtros { position: sticky; top: 80px; }
+  .historia { flex-direction: row; }
+  .grid-principios { grid-template-columns: repeat(3, 1fr); }
+  .contacto-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1100px) {
+  .grid-catalogo { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}

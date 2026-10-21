@@ -1,0 +1,21 @@
+.btn, .tarjeta, .menu__enlace, .acciones__item, .chip, .fav, .principio, .testimonio, .redes a, .campo input, .campo textarea {
+  transition: background var(--transicion), color var(--transicion), border-color var(--transicion), transform var(--transicion), box-shadow var(--transicion);
+}
+.btn:hover { transform: translateY(-2px); border-color: var(--verde-profundo); background: var(--verde-profundo); box-shadow: var(--sombra); }
+.btn:active { transform: translateY(0); }
+.btn--claro:hover { border-color: var(--beige); background: var(--beige); }
+.btn--borde:hover { color: var(--blanco); }
+.tarjeta:hover, .tarjeta:focus-within { transform: translateY(-6px); box-shadow: var(--sombra-hover); }
+.acciones__item:hover { transform: scale(1.08); background: var(--verde); }
+.chip:hover { background: var(--verde); }
+.principio:hover, .testimonio:hover { transform: translateY(-4px); box-shadow: var(--sombra-hover); }
+.fav:hover { transform: scale(1.12); }
+.redes a:hover, .redes a:focus-visible { transform: scale(1.18); }
+.campo input:focus, .campo textarea:focus { outline: none; border-color: var(--verde-profundo); box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.3); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

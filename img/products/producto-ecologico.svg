@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-labelledby="title">
+  <title id="title">Ilustración de productos reutilizables</title>
+  <rect width="600" height="450" rx="24" fill="#f5f5dc"/>
+  <circle cx="300" cy="216" r="130" fill="#d8ebd0"/>
+  <path d="M302 304c-13-87 20-151 93-190 17 76-10 145-93 190Z" fill="#27ae60"/>
+  <path d="M301 302c-5-61-37-101-96-119 0 62 33 103 96 119Z" fill="#57996a"/>
+  <path d="M155 331h290" stroke="#14452f" stroke-width="12" stroke-linecap="round"/>
+  <text x="300" y="386" fill="#14452f" font-family="sans-serif" font-size="24" text-anchor="middle">Reutilizable y consciente</text>
+</svg>

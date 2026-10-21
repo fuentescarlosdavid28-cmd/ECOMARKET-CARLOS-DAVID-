@@ -1,0 +1,111 @@
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--verde-oscuro);
+  border-radius: var(--radio-pill);
+  background: var(--verde-oscuro);
+  color: var(--blanco);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn--claro { border-color: var(--blanco); background: var(--blanco); color: var(--verde-profundo); }
+.btn--borde { background: transparent; color: var(--verde-oscuro); }
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radio);
+  background: var(--blanco);
+  box-shadow: var(--sombra);
+}
+.tarjeta__imagen { width: 100%; aspect-ratio: 4 / 3; background: var(--beige); object-fit: cover; }
+.tarjeta__cuerpo { display: flex; flex: 1; flex-direction: column; padding: var(--esp-2); }
+.tarjeta__texto { color: var(--gris); font-size: 0.95rem; }
+.tarjeta__pie { display: flex; align-items: center; justify-content: space-between; gap: var(--esp-1); margin-top: auto; padding-top: var(--esp-1); }
+.precio { color: var(--verde-oscuro); font-size: 1.1rem; font-weight: 700; }
+.beneficio { padding: var(--esp-3); border-left: 4px solid var(--verde); border-radius: var(--radio); background: var(--blanco); box-shadow: var(--sombra); }
+.beneficio__icono { display: block; margin-bottom: var(--esp-1); font-size: 2rem; }
+.cta { background: linear-gradient(135deg, var(--verde-profundo), var(--verde-oscuro)); color: var(--blanco); text-align: center; }
+.cta p { max-width: 55ch; margin-inline: auto; margin-bottom: var(--esp-3); }
+.pie a:hover { color: var(--verde); text-decoration: underline; }
+.aviso { padding: var(--esp-2); border-left: 4px solid var(--verde-oscuro); border-radius: var(--radio); background: var(--beige); font-size: 0.92rem; }
+.etiqueta { display: inline-block; padding: 0.15rem 0.65rem; border-radius: var(--radio-pill); background: var(--verde); color: var(--verde-profundo); font-size: 0.78rem; font-weight: 700; }
+.etiqueta--agot { background: #e4e4e4; color: #555; }
+.etiqueta--nuevo { background: #ffe08a; color: #5a4300; }
+.etiqueta--dest { background: var(--verde-profundo); color: var(--blanco); }
+.buscador input, .campo input, .campo textarea {
+  min-width: 0;
+  padding: 0.7rem 1rem;
+  border: 2px solid var(--gris-borde);
+  border-radius: var(--radio);
+  color: inherit;
+  font: inherit;
+}
+.buscador input { border-radius: var(--radio-pill); }
+.buscador button:disabled { opacity: 0.75; cursor: not-allowed; }
+.chips .chip { padding: 0.35rem 1rem; border: 1px solid var(--verde-oscuro); border-radius: var(--radio-pill); background: var(--blanco); font-size: 0.9rem; }
+.filtros { padding: var(--esp-2); border: 1px solid var(--gris-borde); border-radius: var(--radio); background: var(--blanco); box-shadow: var(--sombra); }
+.filtros fieldset { margin: 0 0 var(--esp-2); padding: 0; border: 0; }
+.filtros legend { margin-bottom: 0.4rem; font-weight: 700; }
+.filtros label { display: block; padding: 0.15rem 0; cursor: pointer; }
+.filtros input[type="range"] { width: 100%; accent-color: var(--verde-oscuro); }
+.filtros input[type="checkbox"], .filtros input[type="radio"] { accent-color: var(--verde-oscuro); }
+.producto__media { position: relative; }
+.producto__media .etiqueta { position: absolute; top: 10px; left: 10px; }
+.producto__media .etiqueta + .etiqueta { top: 38px; }
+.producto__cat { margin: 0; color: var(--verde-oscuro); font-size: 0.8rem; font-weight: 700; }
+.producto--agotado .tarjeta__imagen { opacity: 0.6; filter: grayscale(1); }
+.producto--agotado .precio { color: var(--gris); text-decoration: line-through; }
+.fav-check { position: absolute; opacity: 0; pointer-events: none; }
+.fav {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--blanco);
+  color: #b9bfb6;
+  box-shadow: var(--sombra);
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.fav-check:checked + .fav { color: #e0405a; }
+.fav-check:focus-visible + .fav { outline: 3px solid var(--verde-profundo); outline-offset: 3px; }
+.paginacion { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--esp-1); margin: var(--esp-4) 0 0; padding: 0; list-style: none; }
+.paginacion span { display: block; padding: 0.5rem 1rem; border: 1px solid var(--gris-borde); border-radius: var(--radio); color: var(--gris); }
+.paginacion .activa { border-color: var(--verde-oscuro); background: var(--verde-oscuro); color: var(--blanco); }
+.bloque { padding: var(--esp-3); border-radius: var(--radio); box-shadow: var(--sombra); }
+.bloque--mision { background: var(--verde); }
+.bloque--vision { border: 2px solid var(--verde-oscuro); background: var(--beige); }
+.principio, .testimonio { padding: var(--esp-3); border-radius: var(--radio); background: var(--blanco); box-shadow: var(--sombra); }
+.principio { border: 1px solid var(--gris-borde); }
+.principio span { display: block; font-size: 2rem; }
+.testimonio__avatar { float: left; width: 48px; height: 48px; margin: 0 var(--esp-1) var(--esp-1) 0; border-radius: 50%; background: var(--verde); object-fit: cover; }
+.estrellas { color: #e5a400; letter-spacing: 2px; }
+.formulario { display: grid; gap: var(--esp-2); }
+.campo label { display: block; margin-bottom: 0.25rem; font-weight: 600; }
+.campo input, .campo textarea { width: 100%; }
+.campo textarea { min-height: 140px; resize: vertical; }
+.campo input:valid, .campo textarea:valid { border-color: var(--verde-oscuro); }
+.campo input:invalid, .campo textarea:invalid { border-color: #d63031; }
+.ayuda { margin: 0.25rem 0 0; color: var(--gris); font-size: 0.85rem; }
+.mapa { box-shadow: var(--sombra); }
+.redes a { display: grid; width: 48px; height: 48px; place-items: center; border-radius: 50%; background: var(--verde-profundo); color: var(--blanco); font-weight: 700; text-decoration: none; }
+
+/* CSS-only catalog filters */
+.catalogo:has(#categoria-hogar:checked, #categoria-moda:checked, #categoria-cuidado:checked, #categoria-alimentos:checked) .producto { display: none; }
+.catalogo:has(#categoria-hogar:checked) .producto[data-categoria="hogar"],
+.catalogo:has(#categoria-moda:checked) .producto[data-categoria="moda"],
+.catalogo:has(#categoria-cuidado:checked) .producto[data-categoria="cuidado"],
+.catalogo:has(#categoria-alimentos:checked) .producto[data-categoria="alimentos"] { display: flex; }
+.catalogo:has(#disp-disponible:checked) .producto[data-stock="agotado"],
+.catalogo:has(#disp-agotado:checked) .producto:not([data-stock="agotado"]) { display: none; }
+.catalogo:has(#precio-bajo:checked) .producto:not([data-precio="bajo"]),
+.catalogo:has(#precio-medio:checked) .producto:not([data-precio="medio"]),
+.catalogo:has(#precio-alto:checked) .producto:not([data-precio="alto"]) { display: none; }
