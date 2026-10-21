@@ -2,7 +2,6 @@
 
 Tienda demostrativa de productos ecológicos, reutilizables y sustentables. El proyecto presenta cuatro vistas responsivas y concentra la interactividad en HTML semántico y CSS puro; no utiliza JavaScript ni frameworks.
 
-> Los productos, precios, testimonios y datos de contacto son ilustrativos. No hay carrito, procesamiento de pagos ni envío de mensajes.
 
 ## Vistas
 
